@@ -1,20 +1,27 @@
 package com.example.android_u3_tema1_ormroom;
 
 import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import java.util.Date;
 
+@Entity(tableName = "contact")
 public class Contacto {
   private String firstName;
   private String lastName;
+
+  @PrimaryKey
   @NonNull
   private String phoneNumber;
   private Date createdDate;
+/*
   public Contacto(String firstName, String lastName, @NonNull String phoneNumber) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.phoneNumber = phoneNumber;
-  }
+  }*/
+
   public String getFirstName() {
     return firstName;
   }
